@@ -20,10 +20,11 @@ class Proyecto135Fuentes : AppCompatActivity() {
                     for(i in arreglo.indices)
                         arreglo[i] = ((Math.random() * 6) + 1).toInt()
                 }
-                fun imprimir() {
+                fun imprimir(): String {
+                    var texto = ""
                     for(elemento in arreglo)
-                        print("$elemento - ")
-                    println();
+                        texto = ("$elemento - \n")
+                    return texto
                 }
                 fun mayor(): Int {
                     var may = arreglo[0]
@@ -34,8 +35,8 @@ class Proyecto135Fuentes : AppCompatActivity() {
                 }
             }
             dados.generar()
-            dados.imprimir()
-            mensaje.text = ("Mayor valor: ${dados.mayor()}")
+            mensaje.append("${dados.imprimir()}\n")
+            mensaje.append("Mayor valor: ${dados.mayor()}")
         }
     }
 }

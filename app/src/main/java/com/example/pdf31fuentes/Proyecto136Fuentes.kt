@@ -14,6 +14,7 @@ class Proyecto136Fuentes : AppCompatActivity() {
         val boton = findViewById<Button>(R.id.button6)
 
         boton.setOnClickListener{
+            mensaje.text = ""
             mensaje.append("${Mayor.maximo(12, 23)}\n ${Mayor.maximo(12.5, 23.5)}\n ${Mayor.maximo(12.5f, 23.5f)}\n")
         }
     }
